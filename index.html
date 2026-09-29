@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TechMart | Smart Delivery Route</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="hero">
+
+        <div class="hero-content">
+
+            <span class="badge">
+                TECHMART LOGISTICS
+            </span>
+
+            <h1>
+                Smart Delivery Route
+            </h1>
+
+            <p>
+                Find the shortest and most efficient route
+                between delivery locations.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <!-- Main -->
+    <main class="container">
+
+        <!-- Route Planner -->
+        <section class="card planner">
+
+            <div class="section-heading">
+
+                <div class="heading-icon">
+                    🚚
+                </div>
+
+                <div>
+                    <h2>
+                        Plan Your Delivery
+                    </h2>
+
+                    <p>
+                        Select your starting point and destination.
+                    </p>
+                </div>
+
+            </div>
+
+
+            <div class="form">
+
+                <!-- From -->
+                <div class="input-box">
+
+                    <label for="source">
+                        From
+                    </label>
+
+                    <select id="source">
+
+                        <option value="">
+                            Select starting location
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <!-- To -->
+                <div class="input-box">
+
+                    <label for="destination">
+                        To
+                    </label>
+
+                    <select id="destination">
+
+                        <option value="">
+                            Select destination
+                        </option>
+
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <button id="findRoute">
+                Find Best Route
+            </button>
+
+        </section>
+
+
+        <!-- Empty State -->
+        <section id="emptyState" class="card empty-state">
+
+            <div class="empty-icon">
+                🗺️
+            </div>
+
+            <h2>
+                Ready to plan?
+            </h2>
+
+            <p>
+                Select two locations above to discover
+                the shortest delivery route.
+            </p>
+
+        </section>
+
+
+        <!-- Result -->
+        <section id="resultSection" class="card result hidden">
+
+            <div class="result-top">
+
+                <div>
+
+                    <span class="result-label">
+                        OPTIMIZED ROUTE
+                    </span>
+
+                    <h2>
+                        Best Delivery Route
+                    </h2>
+
+                </div>
+
+
+                <div class="distance">
+
+                    <strong id="totalDistance">
+                        0
+                    </strong>
+
+                    <span>
+                        km
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- Route -->
+            <div id="routePath" class="route-path">
+            </div>
+
+
+            <!-- Statistics -->
+            <div class="stats">
+
+                <div class="stat">
+
+                    <span class="stat-icon">
+                        📍
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Stops
+                        </small>
+
+                        <strong id="totalStops">
+                            0
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <span class="stat-icon">
+                        📏
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Total Distance
+                        </small>
+
+                        <strong>
+                            <span id="distanceSmall">
+                                0
+                            </span>
+                            km
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="stat">
+
+                    <span class="stat-icon">
+                        ⏱️
+                    </span>
+
+                    <div>
+
+                        <small>
+                            Estimated Time
+                        </small>
+
+                        <strong id="estimatedTime">
+                            0 min
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Product Explorer -->
+        <section class="card product-explorer">
+
+            <div class="section-heading">
+
+                <div class="heading-icon">
+                    🛍️
+                </div>
+
+                <div>
+
+                    <h2>
+                        Products
+                    </h2>
+
+                    <p>
+                        View products to add them to your recent history
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div id="productList" class="product-list">
+
+                <!-- Products will appear here using JavaScript -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Recently Viewed -->
+    <section class="card recently-viewed">
+
+        <div class="section-heading">
+
+            <div class="heading-icon">
+                👀
+            </div>
+
+            <div>
+
+                <h2>
+                    Recently Viewed
+                </h2>
+
+                <p>
+                    Products you viewed recently
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div id="recentProducts" class="recent-products">
+
+            <p class="empty-message">
+                No products viewed yet.
+            </p>
+
+        </div>
+
+
+        <button id="clearHistory" class="clear-btn">
+            Clear History
+        </button>
+
+    </section>
+
+
+      <script src="app.js"></script>
+
+
+</body>
+
+</html>
